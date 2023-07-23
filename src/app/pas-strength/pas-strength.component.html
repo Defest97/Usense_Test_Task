@@ -1,6 +1,7 @@
  <input type="password" placeholder="Enter your password here" [(ngModel)]="pass" (input)="onInput()">
 <div class="container">
-  <div [class]="pasStrengthEasy">Easy password</div>
-  <div [class]="pasStrengthMedium">Medium password</div>
-  <div [class]="pasStrengthStrong">Strong password</div>
+  <div [ngClass]="pasStrengthEasy">Easy password</div>
+  <div [ngClass]="pasStrengthMedium">Medium password</div>
+  <div [ngClass]="pasStrengthStrong">Strong password</div>
+  
 </div>
