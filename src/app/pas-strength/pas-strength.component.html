@@ -1,7 +1,7 @@
- <input type="password" placeholder="Enter your password here" [(ngModel)]="pass" (input)="onInput()">
+ <input type="text" placeholder="Enter your password here" [(ngModel)]="password" (input)="onInput()">
 <div class="container">
-  <div [ngClass]="pasStrengthEasy">Easy password</div>
-  <div [ngClass]="pasStrengthMedium">Medium password</div>
-  <div [ngClass]="pasStrengthStrong">Strong password</div>
+  <div [ngClass]="divColors.pasStrengthEasy">Easy password</div>
+  <div [ngClass]="divColors.pasStrengthMedium">Medium password</div>
+  <div [ngClass]="divColors.pasStrengthStrong">Strong password</div>
   
 </div>
