@@ -10,6 +10,7 @@ export class PasswordStrengthService {
     pasStrengthStrong: 'gray'
   };
   passwordCheck(tmpPassword: string) {
+    
     const hasLetters = /[a-zA-Z]/.test(tmpPassword);
     const hasDigits = /\d/.test(tmpPassword)
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`₴№]/.test(tmpPassword)

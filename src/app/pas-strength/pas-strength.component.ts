@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PasswordStrengthService } from '../password-strength.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-pas-strength',
@@ -7,16 +8,11 @@ import { PasswordStrengthService } from '../password-strength.service';
   styleUrls: ['./pas-strength.component.css']
 })
 export class PasStrengthComponent {
-  password: string = '';
   divColors: any;
-
-  constructor(private passwordStrength:PasswordStrengthService)
-  {
-    this.onInput();
+  passwordForm=this.formBuilder.group({
+    passwordControl:['']
+  });
+  constructor(private formBuilder: FormBuilder,private passwordStrength: PasswordStrengthService ) {
+    this.divColors=passwordStrength.divColors;
   }
-  onInput() {
-    this.divColors=this.passwordStrength.passwordCheck(this.password)
-  }
-  
-
- }
+}

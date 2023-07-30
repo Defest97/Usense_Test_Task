@@ -1,7 +1,8 @@
- <input type="text" placeholder="Enter your password here" [(ngModel)]="password" (input)="onInput()">
+<form [formGroup]='passwordForm'>
+  <app-password-input formControlName="passwordControl"></app-password-input>
+</form>
 <div class="container">
   <div [ngClass]="divColors.pasStrengthEasy">Easy password</div>
   <div [ngClass]="divColors.pasStrengthMedium">Medium password</div>
   <div [ngClass]="divColors.pasStrengthStrong">Strong password</div>
-  
 </div>
